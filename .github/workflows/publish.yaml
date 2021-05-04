@@ -23,7 +23,7 @@ jobs:
         # Add src/ folder to PYTHONPATH so we can import boto3_async during tests.
         run: PYTHONPATH=${PWD}/src pytest
       - name: Publish
-        uses: pypa/gh-action-pypi-publish@main
+        uses: pypa/gh-action-pypi-publish@master
         with:
           user: __token__
           password: ${{ secrets.pypi_password }}
