@@ -1,0 +1,29 @@
+name: Publish Package to PyPI
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.x"
+      - name: Install build dependencies
+        # Install boto3 as boto3_async depends on it.
+        run: pip install -U setuptools wheel build boto3 pytest
+      - name: Build
+        run: python -m build .
+      - name: Test
+        # Add src/ folder to PYTHONPATH so we can import boto3_async during tests.
+        run: PYTHONPATH=${PWD}/src pytest
+      - name: Publish
+        uses: pypa/gh-action-pypi-publish@main
+        with:
+          user: __token__
+          password: ${{ secrets.pypi_password }}
