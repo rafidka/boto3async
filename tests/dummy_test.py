@@ -1,4 +1,4 @@
-from boto3_async.dummy import dummy
+from boto3async.dummy import dummy
 
 
 def test_dummy():

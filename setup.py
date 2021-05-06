@@ -30,7 +30,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 # Fields marked as "Optional" may be commented out.
 
 setup(
-    name='boto3_async',  # Required
+    name='boto3async',  # Required
 
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
@@ -38,7 +38,7 @@ setup(
     # For a discussion on single-sourcing the version across setup.py and the
     # project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version=get_version("src/boto3_async/__init__.py"),  # Required
+    version=get_version("src/boto3async/__init__.py"),  # Required
 
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
@@ -71,7 +71,7 @@ setup(
     #
     # This field corresponds to the "Home-Page" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
-    url='https://github.com/rafidka/boto3_async',  # Optional
+    url='https://github.com/rafidka/boto3async',  # Optional
 
     # This should be your name or the name of the organization which owns the
     # project.
@@ -93,10 +93,10 @@ setup(
 
         # Indicate who your project is intended for
         'Intended Audience :: Developers',
-        'Topic :: Software Development :: Build Tools',
+        'Topic :: Software Development :: Libraries',
 
         # Pick your license as you wish
-        'License :: OSI Approved :: Apache-2.0 License',
+        'License :: OSI Approved :: Apache Software License',
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate you support Python 3. These classifiers are *not*
@@ -155,7 +155,7 @@ setup(
     # dependencies). Users will be able to install these using the "extras"
     # syntax, for example:
     #
-    #   $ pip install boto3_async[dev]
+    #   $ pip install boto3async[dev]
     #
     # Similar to `install_requires` above, these must be valid existing
     # projects.
@@ -167,7 +167,7 @@ setup(
     # If there are data files included in your packages that need to be
     # installed, specify them here.
     package_data={  # Optional
-        'boto3_async': [],
+        'boto3async': [],
     },
 
     # Although 'package_data' is the preferred approach, in some case you may
@@ -200,9 +200,9 @@ setup(
     # maintainers, and where to support the project financially. The key is
     # what's used to render the link text on PyPI.
     project_urls={  # Optional
-        'Bug Reports': 'https://github.com/rafidka/boto3_async/issues',
+        'Bug Reports': 'https://github.com/rafidka/boto3async/issues',
         'Funding': 'https://donate.pypi.org',
         'Say Thanks!': 'http://saythanks.io/to/rafidka@gmail.com',
-        'Source': 'https://github.com/rafidka/boto3_async',
+        'Source': 'https://github.com/rafidka/boto3async',
     },
 )
