@@ -300,9 +300,11 @@ Now it took 2077 ms in total, vs 619 ms from the parallel execution.
 
 # Caveats
 
-- This library depends on Python's [to_thread](https://docs.python.org/3/library/asyncio-task.html#asyncio.to_thread)
+- ~~This library depends on Python's [to_thread](https://docs.python.org/3/library/asyncio-task.html#asyncio.to_thread)
   function. Unfortunately, this function is only supported in Python 3.9 and beyond, hence this library
-  only runs on Python 3.9 and beyond.
+  only runs on Python 3.9 and beyond.~~ I copied the implementation of `to_thread` from Python 3.9's
+  [source code](https://github.com/python/cpython/blob/a0bd9e9c11/Lib/asyncio/threads.py#L12-L25) so
+  now the library works on Python 3.7 and later.
 - Only [clients](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/clients.html), i.e.
   what are created via `boto3.client('xyz')`, support async methods; there is no support for resources
   at the moment. The reason is that [resources](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/resources.html)
