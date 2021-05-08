@@ -2,7 +2,7 @@ import asyncio
 import boto3
 import re
 
-__version__ = '0.0.3'
+__version__ = '0.0.4'
 
 
 # From https://stackoverflow.com/a/1176023/196697
